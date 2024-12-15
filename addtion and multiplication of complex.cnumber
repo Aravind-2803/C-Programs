@@ -1,0 +1,54 @@
+#include<stdio.h>
+
+ struct complexnumber
+{
+    int real;
+    int img;
+};
+
+
+struct complexnumber add(struct complexnumber x, struct complexnumber y)
+{
+    struct complexnumber add;
+    add.real = x.real + y.real;
+    add.img = x.img + y.img;
+    return (add);
+}
+
+
+struct complexnumber product(struct complexnumber x,struct complexnumber y)
+{
+    struct complexnumber product;
+    product.real = ( x.real*y.real) - (x.img*y.img);
+    product.img = (x.real*y.img) + (x.img*y.real);
+    return (product);
+}
+
+
+int main()
+{
+    struct complexnumber a,b,sum,products;
+    
+	a.real = 2;
+	a.img = 3;
+
+	b.real = 4;
+	b.img = 5;
+	
+	printf("\n a = %d + %di", a.real, a.img);
+
+	printf("\n b = %d + %di", b.real, b.img);
+
+    
+    sum=add(a,b);
+    
+    printf("\nTHE SUM IS %d +i%d",sum.real,sum.img);
+    
+    
+    products=add(a,b);
+    
+    printf("\nTHE PRODUCT IS %d +i%d",products.real,products.img);
+  return 0;
+    
+    
+}
