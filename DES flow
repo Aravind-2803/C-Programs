@@ -1,0 +1,32 @@
+Input Message
+     ↓
+Split into 8-character blocks
+     ↓
+Convert each block to 64 bits
+     ↓
+Initial Permutation
+     ↓
+L0 + R0
+     ↓
+Generate 16 DES Keys
+     ↓
+16 DES Rounds
+     │
+     ├── Expansion 32 → 48
+     ├── XOR with Round Key
+     ├── S-Box 48 → 32
+     ├── P Permutation
+     └── XOR with L
+     ↓
+Swap L and R
+     ↓
+Final Permutation
+     ↓
+64-bit Ciphertext
+     ↓
+Hexadecimal Ciphertext
+
+
+
+key = "12345678"
+
